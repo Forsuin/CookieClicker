@@ -38,7 +38,10 @@
          <children>
             <HBox alignment="CENTER" fillHeight="false" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="NEVER">
                <children>
-                  <RadioButton mnemonicParsing="false" selected="true" text="1" textFill="WHITE" toggleGroup="$buyAmounts" userData="1">
+               	  <fx:define>
+               	  	<ToggleGroup fx:id="buyAmountGroup" />
+               	  </fx:define>
+                  <RadioButton mnemonicParsing="false" selected="true" text="1" textFill="WHITE" userData="1">
                      <HBox.margin>
                         <Insets right="10.0" />
                      </HBox.margin>
@@ -46,10 +49,10 @@
                         <Font name="System Bold" size="12.0" />
                      </font>
                      <toggleGroup>
-                        <ToggleGroup fx:id="buyAmounts" />
+                        <ToggleGroup fx:id="buyAmountGroup" />
                      </toggleGroup>
                   </RadioButton>
-                  <RadioButton mnemonicParsing="false" text="10" textFill="WHITE" toggleGroup="$buyAmounts" userData="10">
+                  <RadioButton mnemonicParsing="false" text="10" textFill="WHITE" toggleGroup="$buyAmountGroup" userData="10">
                      <HBox.margin>
                         <Insets right="10.0" />
                      </HBox.margin>
@@ -57,7 +60,7 @@
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </RadioButton>
-                  <RadioButton mnemonicParsing="false" text="100" textFill="WHITE" toggleGroup="$buyAmounts" userData="100">
+                  <RadioButton mnemonicParsing="false" text="100" textFill="WHITE" toggleGroup="$buyAmountGroup" userData="100">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -115,7 +118,7 @@
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                            <children>
-                              <Button fx:id="buttonBuyGrandma" maxWidth="1.7976931348623157E308" mnemonicParsing="false" HBox.hgrow="ALWAYS">
+                              <Button fx:id="buttonBuyGrandma" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#handleBuyGrandma" HBox.hgrow="ALWAYS">
                                  <graphic>
                                     <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                        <children>
@@ -157,7 +160,7 @@
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                            <children>
-                              <Button fx:id="buttonBuyFarm" maxWidth="1.7976931348623157E308" mnemonicParsing="false" HBox.hgrow="ALWAYS">
+                              <Button fx:id="buttonBuyFarm" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#handleBuyFarm" HBox.hgrow="ALWAYS">
                                  <graphic>
                                     <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                        <children>
@@ -198,7 +201,7 @@
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                            <children>
-                              <Button fx:id="buttonBuyMine" maxWidth="1.7976931348623157E308" mnemonicParsing="false" HBox.hgrow="ALWAYS">
+                              <Button fx:id="buttonBuyMine" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#handleBuyMine" HBox.hgrow="ALWAYS">
                                  <graphic>
                                     <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                        <children>
@@ -240,7 +243,7 @@
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                            <children>
-                              <Button fx:id="buttonBuyFactory" maxWidth="1.7976931348623157E308" mnemonicParsing="false" HBox.hgrow="ALWAYS">
+                              <Button fx:id="buttonBuyFactory" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#handleBuyFactory" HBox.hgrow="ALWAYS">
                                  <graphic>
                                     <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                        <children>
@@ -282,7 +285,7 @@
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                            <children>
-                              <Button fx:id="buttonBuyBank" maxWidth="1.7976931348623157E308" mnemonicParsing="false" HBox.hgrow="ALWAYS">
+                              <Button fx:id="buttonBuyBank" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#handleBuyBank" HBox.hgrow="ALWAYS">
                                  <graphic>
                                     <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                        <children>
@@ -324,7 +327,7 @@
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                            <children>
-                              <Button fx:id="buttonBuyTemple" maxWidth="1.7976931348623157E308" mnemonicParsing="false" HBox.hgrow="ALWAYS">
+                              <Button fx:id="buttonBuyTemple" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#handleBuyTemple" HBox.hgrow="ALWAYS">
                                  <graphic>
                                     <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                        <children>
@@ -366,7 +369,7 @@
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                            <children>
-                              <Button fx:id="buttonBuyWizard" maxWidth="1.7976931348623157E308" mnemonicParsing="false" HBox.hgrow="ALWAYS">
+                              <Button fx:id="buttonBuyWizard" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#handleBuyWizardTower" HBox.hgrow="ALWAYS">
                                  <graphic>
                                     <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                        <children>
@@ -408,7 +411,7 @@
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                            <children>
-                              <Button fx:id="buttonBuyShipment" maxWidth="1.7976931348623157E308" mnemonicParsing="false" HBox.hgrow="ALWAYS">
+                              <Button fx:id="buttonBuyShipment" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#handleBuyShipment" HBox.hgrow="ALWAYS">
                                  <graphic>
                                     <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                        <children>
@@ -450,7 +453,7 @@
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                            <children>
-                              <Button fx:id="buttonBuyAlchemy" maxWidth="1.7976931348623157E308" mnemonicParsing="false" HBox.hgrow="ALWAYS">
+                              <Button fx:id="buttonBuyAlchemy" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#handleBuyAlchemyLab" HBox.hgrow="ALWAYS">
                                  <graphic>
                                     <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                        <children>
@@ -492,7 +495,7 @@
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                            <children>
-                              <Button fx:id="buttonBuyPortal" maxWidth="1.7976931348623157E308" mnemonicParsing="false" HBox.hgrow="ALWAYS">
+                              <Button fx:id="buttonBuyPortal" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#handleBuyPortal" HBox.hgrow="ALWAYS">
                                  <graphic>
                                     <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                        <children>
@@ -534,7 +537,7 @@
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                            <children>
-                              <Button fx:id="buttonBuyTimeMachine" maxWidth="1.7976931348623157E308" mnemonicParsing="false" HBox.hgrow="ALWAYS">
+                              <Button fx:id="buttonBuyTimeMachine" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#handleBuyTimeMachine" HBox.hgrow="ALWAYS">
                                  <graphic>
                                     <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                        <children>
@@ -576,7 +579,7 @@
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                            <children>
-                              <Button fx:id="buttonBuyAntimatter" maxWidth="1.7976931348623157E308" mnemonicParsing="false" HBox.hgrow="ALWAYS">
+                              <Button fx:id="buttonBuyAntimatter" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#handleBuyAntimatterCondenser" HBox.hgrow="ALWAYS">
                                  <graphic>
                                     <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                        <children>

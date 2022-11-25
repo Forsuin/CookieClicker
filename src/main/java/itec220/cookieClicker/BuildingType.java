@@ -13,7 +13,7 @@ public enum BuildingType {
 	ALCHEMY_LAB("Alchemy Lab", 75_000_000_000.0, 1_600_000),
 	PORTAL("Portal", 1_000_000_000_000.0, 10_000_000),
 	TIME_MACHINE("Time Machine", 14_000_000_000_000.0, 65_000_000),
-	ANITMATTER_CONDENSER("Antimatter Condenser", 170_000_000_000_000.0, 430_000_000);
+	ANTIMATTER_CONDENSER("Antimatter Condenser", 170_000_000_000_000.0, 430_000_000);
 	
 	private String name;
 	private double baseCost;
