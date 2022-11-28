@@ -24,7 +24,7 @@ public class App extends Application {
     public void start(Stage stage) throws IOException {
     	
     	stage.setTitle("Cookie Clicker");
-    	scene = new Scene(loadFXML("primary"), 630, 480);
+    	scene = new Scene(loadFXML("primary"), 1080, 720);
     	stage.setScene(scene);
     	stage.show();
     	

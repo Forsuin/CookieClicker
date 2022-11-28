@@ -1,3 +1,11 @@
 .scroll-pane > .viewport {
 	-fx-background-color: transparent;
 }
+
+.bgBlue {
+	-fx-background-image: url("img/bgBlue.jpg");
+}
+
+.bgMint {
+	-fx-background-image: url("img/bgMint.jpg");
+}

@@ -5,12 +5,16 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
+import javafx.animation.KeyFrame;
+import javafx.animation.KeyValue;
+import javafx.animation.Timeline;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.paint.Color;
 import javafx.scene.text.*;
+import javafx.util.Duration;
 
 public class GameController {
 
@@ -178,7 +182,7 @@ public class GameController {
 		
 		
 		
-		this.cookieAmtUI.setText(decFormat.format(this.game.getCookiesAmt()));
+		this.cookieAmtUI.setText(String.format("%s cookies", decFormat.format(this.game.getCookiesAmt())));
 
 		this.cursorAmt.setText(String.valueOf(this.game.getBuildingAmt(BuildingType.CURSOR)));
 		this.grandmaAmt.setText(String.valueOf(this.game.getBuildingAmt(BuildingType.GRANDMA)));
@@ -200,7 +204,7 @@ public class GameController {
 
 		game.buyBuildings(type, amount);
 	}
-
+	
 	@FXML
 	public void clickCookie() {
 		game.clickCookie();
